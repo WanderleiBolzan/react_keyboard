@@ -11,6 +11,7 @@ export class App extends React.Component<{}, AppState> {
 
   constructor(props: {}) {
     super(props);
+
     this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
@@ -23,8 +24,6 @@ export class App extends React.Component<{}, AppState> {
   }
 
   handleKeyUp(event: KeyboardEvent) {
-    // console.log(event.key);
-
     this.setState({ pressedKey: event.key });
   }
 
@@ -38,8 +37,8 @@ export class App extends React.Component<{}, AppState> {
 
     return (
       <div
-        className="min-h-screen flex items-center justify-center
-        bg-gray-100 p-4"
+        className="min-h-screen flex
+        items-center justify-center bg-gray-100 p-4"
       >
         <div className="bg-white p-8 rounded-lg shadow-lg text-center">
           <p className="text-2xl font-semibold text-gray-800">{message}</p>
